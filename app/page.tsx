@@ -1,8 +1,18 @@
-import { BlogPosts } from 'app/components/posts'
+import { BlogPosts } from 'app/components/posts';
+import Image from 'next/image';
 
 export default function Page() {
   return (
     <section>
+      <div className="w-40 h-40 relative mb-8">
+        <Image
+          src="/profile.png"
+          alt="Photo of author"
+          layout="fill"
+          className="rounded-full object-cover"
+        />
+      </div>
+      
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
         My Portfolio
       </h1>
@@ -17,3 +27,5 @@ export default function Page() {
     </section>
   )
 }
+
+//The mb-8 on line 7 stands for margin bottom 7. You use margin for outside the element, and you use padding for within
