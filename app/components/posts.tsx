@@ -2,11 +2,11 @@ import Link from 'next/link'
 import { formatDate, getBlogPosts } from 'app/projects/utils'
 
 export function BlogPosts() {
-  let allBlogs = getBlogPosts()
+  let allProjects = getBlogPosts()
 
   return (
     <div>
-      {allBlogs
+      {allProjects
         .sort((a, b) => {
           if (
             new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
