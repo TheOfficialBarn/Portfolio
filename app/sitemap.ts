@@ -3,7 +3,7 @@ import { getBlogPosts } from 'app/projects/utils'
 export const baseUrl = 'https://portfolio-blog-starter.vercel.app'
 
 export default async function sitemap() {
-  let blogs = getBlogPosts().map((post) => ({
+  let projects = getBlogPosts().map((post) => ({
     url: `${baseUrl}/projects/${post.slug}`,
     lastModified: post.metadata.publishedAt,
   }))
@@ -13,5 +13,7 @@ export default async function sitemap() {
     lastModified: new Date().toISOString().split('T')[0],
   }))
 
-  return [...routes, ...blogs]
+  return [...routes, ...projects]
 }
+
+// May delete soon
