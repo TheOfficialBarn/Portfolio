@@ -35,18 +35,28 @@ export default function Contact() {
             <form id="contact-form" onSubmit={handleSubmit}>
                 <h1 className="mb-8 text-2xl font-semibold tracking-tighter">Contact</h1>
                 <div>
-                    <label htmlFor="name">Name</label>
-                    <input type="text" name="name" required placeholder="Your name" />
+                    <label htmlFor="name" className="block">Name</label>
+                    <input type="text" name="name" required placeholder="Your name" className="mt-1 block w-full px-4 py-2 bg-gray-700 text-white rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    />
                 </div>
+
+                <br />
+
                 <div>
-                    <label htmlFor="email">Email</label>
-                    <input type="email" name="email" required placeholder="email@example.com" />
+                    <label htmlFor="email" className="block">Email</label>
+                    <input type="email" name="email" required placeholder="email@example.com" className="mt-1 block w-full px-4 py-2 bg-gray-700 text-white rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"/>
                 </div>
+
+                <br />
+
                 <div>
-                    <label htmlFor="message">Message</label>
-                    <textarea name="message" required rows={3} placeholder="Enter Message"></textarea>
+                    <label htmlFor="message" className="block">Message</label>
+                    <textarea name="message" required rows={3} placeholder="Enter Message" className="mt-1 block w-full px-4 py-2 bg-gray-700 text-white rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    ></textarea>
                 </div>
-                <button type="submit">Send</button>
+                <br />
+                <button type="submit" className="w-full py-2 px-4 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                >Send</button>
             </form>
         </section>
     );
