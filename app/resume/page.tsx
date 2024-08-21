@@ -6,7 +6,7 @@ export default function Page() {
             <br/>
 
             <div className="drop-shadow-2xl">
-            <iframe src="/resume.pdf" width="100%" height="745px" />
+            <iframe src="/resume.pdf" className="w-full h-[745px] border-0" />
             </div>
 
         </section>
