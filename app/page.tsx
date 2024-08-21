@@ -9,7 +9,7 @@ export default function Page() {
           src="/profile.png"
           alt="Photo of author"
           layout="fill"
-          className="rounded-full object-cover"
+          className="rounded-full object-cover shadow-2xl"
         />
       </div>
       

@@ -1,12 +1,18 @@
 import Link from 'next/link'
 
 const navItems = {
-  '/': {
-    name: 'home',
+  '/': { //This is the path for the home page. It has to exist as a folder in the app directory
+    name: 'home', //This is the name of what appears on the nav bar
   },
   '/projects': {
     name: 'projects',
   },
+  '/resume': {
+    name: 'resume',
+  },
+  '/tutoring': {
+    name: 'tutoring'
+  }
 }
 
 export function Navbar() {
