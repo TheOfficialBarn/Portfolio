@@ -12,7 +12,10 @@ const navItems = {
   },
   '/tutoring': {
     name: 'tutoring'
-  }
+  },
+  '/contact': {
+    name: 'contact',
+  },
 }
 
 export function Navbar() {
