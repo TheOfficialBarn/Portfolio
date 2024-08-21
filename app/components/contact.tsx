@@ -5,6 +5,8 @@ import React from 'react';
 export default function Contact() {
     async function handleSubmit(e) {
         e.preventDefault();
+
+        const form = e.target as HTMLFormElement; //This is a type assertion. It is used to tell TypeScript that the object is of a specific type. In this case, it is an HTMLFormElement.
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
             headers: {
@@ -21,13 +23,16 @@ export default function Contact() {
         const result = await response.json();
         if (result.success) {
             console.log(result);
+            alert("Message sent succesfully!");
+            //I want to incorporate a better alert system in the future with sweetalert2.
+
+            form.reset();
         }
     }
 
-
     return (
         <section className="bg-slate-800 p-6 rounded-2xl shadow-2xl">
-            <form onSubmit={handleSubmit}>
+            <form id="contact-form" onSubmit={handleSubmit}>
                 <h1 className="mb-8 text-2xl font-semibold tracking-tighter">Contact</h1>
                 <div>
                     <label htmlFor="name">Name</label>
