@@ -1,6 +1,7 @@
 'use client';
-
 import React from 'react';
+
+//This contact form component allows users to send me a message. It uses the Web3Forms API to send the message to my email. The form is styled using Tailwind CSS.
 
 export default function Contact() {
     async function handleSubmit(e) {
