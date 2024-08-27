@@ -2,7 +2,7 @@
 import React from 'react';
 console.log("API Key:", process.env.NEXT_PUBLIC_WEB3_FORMS_ACCESS_KEY);
 
-//This contact form component allows users to send me a message. It uses the Web3Forms API to send the message to my email. The form is styled using Tailwind CSS.
+//This contact form component allows users to send me a message. It uses the Web3Forms API to send the message to my email. The form is styled using Tailwind CSS
 
 export default function Contact() {
     async function handleSubmit(e) {
