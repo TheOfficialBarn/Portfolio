@@ -49,10 +49,10 @@ export default function RootLayout({
     <html
       lang="en"
       className={cx(
-        'bg-[url("/light-background.jpeg")] bg-cover bg-center bg-fixed h-screen text-black dark:text-white dark:bg-[url("/dark-background.jpeg")]', //bg-fixed makes the background image not scroll with the page
+        'bg-gradient-to-br from-stone-500 to-stone-100 bg-fixed h-screen text-black dark:text-white dark:bg-gradient-to-br dark:from-stone-950 dark:to-stone-500',
         GeistSans.variable,
         GeistMono.variable
-      )}
+      )} //Need to play around with this on mobile devices
     >
       <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
