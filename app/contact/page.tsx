@@ -1,3 +1,4 @@
+import CalCom from "app/components/calcom";
 import Contact from "app/components/contact";
 
 export default function Page() {
@@ -7,6 +8,8 @@ export default function Page() {
             <p>Please give me two business days to respond to any message. </p>
             <div className="my-8">
                 <Contact />
+                <br />
+                <CalCom />
             </div>
         </section>
     );
