@@ -6,7 +6,7 @@ export default function Page() {
     <section>
       <div className="w-40 h-40 relative mb-8">
         <Image
-          src="/profile.png"
+          src="/SanPatricio.JPG"
           alt="Photo of author"
           layout="fill"
           className="rounded-full object-cover shadow-2xl"
