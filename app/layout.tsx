@@ -9,6 +9,7 @@ import Footer from './components/footer'
 import { baseUrl } from './sitemap'
 import Time from './components/time'
 
+
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
@@ -48,7 +49,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={cx(
-        'text-black bg-[url("/bg-white.jpeg")] bg-cover bg-center bg-fixed h-screen dark:text-white dark:bg-[url("/bg-black.jpeg")]', //bg-fixed makes the background image not scroll with the page
+        'bg-[url("/light-background.jpeg")] bg-cover bg-center bg-fixed h-screen text-black dark:text-white dark:bg-[url("/dark-background.jpeg")]', //bg-fixed makes the background image not scroll with the page
         GeistSans.variable,
         GeistMono.variable
       )}

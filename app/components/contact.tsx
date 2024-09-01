@@ -33,12 +33,12 @@ export default function Contact() {
     }
 
     return (
-        <section className="bg-slate-200 dark:bg-slate-800 p-6 rounded-2xl shadow-2xl">
+        <section className="bg-stone-400 dark:bg-stone-600 p-6 rounded-2xl shadow-2xl">
             <form id="contact-form" onSubmit={handleSubmit}>
                 <h1 className="mb-8 text-2xl font-semibold tracking-tighter">Contact</h1>
                 <div>
                     <label htmlFor="name" className="block">Name</label>
-                    <input type="text" name="name" required placeholder="Your name" className="mt-1 block w-full px-4 py-2 bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white rounded-md border border-gray-400 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    <input type="text" name="name" required placeholder="Your name" className="mt-1 block w-full px-4 py-2 bg-stone-300 dark:bg-stone-700 text-slate-700 dark:text-white rounded-md border border-slate-400 dark:border-slate-600 focus:outline-none focus:ring-2 focus:ring-stone-300"
                     />
                 </div>
 
@@ -46,18 +46,18 @@ export default function Contact() {
 
                 <div>
                     <label htmlFor="email" className="block">Email</label>
-                    <input type="email" name="email" required placeholder="email@example.com" className="mt-1 block w-full px-4 py-2 bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white rounded-md border border-gray-400 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"/>
+                    <input type="email" name="email" required placeholder="email@example.com" className="mt-1 block w-full px-4 py-2 bg-stone-300 dark:bg-stone-700 text-slate-700 dark:text-white rounded-md border border-slate-400 dark:border-slate-600 focus:outline-none focus:ring-2 focus:ring-stone-300"/>
                 </div>
 
                 <br />
 
                 <div>
                     <label htmlFor="message" className="block">Message</label>
-                    <textarea name="message" required rows={3} placeholder="Enter Message" className="mt-1 block w-full px-4 py-2 bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white rounded-md border border-gray-400 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    <textarea name="message" required rows={3} placeholder="Enter Message" className="mt-1 block w-full px-4 py-2 bg-stone-300 dark:bg-stone-700 text-slate-700 dark:text-white rounded-md border border-slate-400 dark:border-slate-600 focus:outline-none focus:ring-2 focus:ring-stone-300"
                     ></textarea>
                 </div>
                 <br />
-                <button type="submit" className="w-full py-2 px-4 bg-indigo-400 dark:bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                <button type="submit" className="w-full py-2 px-4 bg-slate-500 text-white font-semibold rounded-md hover:bg-slate-700"
                 >Send</button>
             </form>
         </section>

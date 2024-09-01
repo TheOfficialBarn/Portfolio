@@ -18,7 +18,7 @@ export default function Page() {
             <br/>
             <p>My rate is $15/hour for the first session and $30/hour moving forward. I am available for in-person tutoring in the Lawrence, KS area, or online tutoring via Zoom. Please contact me below for more details; I would love to chat!</p>
             <br/>
-            <a href="/contact" className="text-indigo-400 dark:text-indigo-600 hover:underline">Contact me</a>
+            <a href="/contact" className=" text-xl font-bold text-stone-600 dark:text-stone-300 hover:underline">Contact me</a>
         </section>
     )
 }

@@ -1,4 +1,9 @@
 @import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+// The above 3 lines might not work and were added on September 1st 2024
+
 
 ::selection {
   background-color: #47a3f3;
