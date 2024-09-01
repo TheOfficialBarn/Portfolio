@@ -48,7 +48,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={cx(
-        'text-black bg-[url("/White.jpeg")] bg-cover bg-center h-screen dark:text-white dark:bg-[url("/Black.jpeg")]',
+        'text-black bg-[url("/White.jpeg")] bg-cover bg-center bg-fixed h-screen dark:text-white dark:bg-[url("/Black.jpeg")]', //bg-fixed makes the background image not scroll with the page
         GeistSans.variable,
         GeistMono.variable
       )}
