@@ -22,14 +22,14 @@ export default function Time() {
     if (!time) { //If time is null, display loading...
       return (
         <section>
-          <h1 className="mb-8 ml-1 tracking-tighter">Loading...</h1>
+          <h1 className="mb-8 tracking-tighter">Loading...</h1>
         </section>
       )
     }
 
     return (
       <section>
-        <h1 className="mb-8 ml-1 tracking-tighter">{time}</h1>
+        <h1 className="mb-8 tracking-tighter">{time}</h1>
       </section>
     );
   }

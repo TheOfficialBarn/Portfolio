@@ -13,7 +13,7 @@ import Time from './components/time'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
+    default: 'Aiden\'s Portfolio',
     template: '%s | Next.js Portfolio Starter',
   },
   description: 'This is my portfolio.',
@@ -49,12 +49,18 @@ export default function RootLayout({
     <html
       lang="en"
       className={cx(
-        'bg-gradient-to-br from-stone-500 to-stone-100 bg-fixed h-screen text-black dark:text-white dark:bg-gradient-to-br dark:from-stone-950 dark:to-stone-500',
+        'text-black dark:text-white',
         GeistSans.variable,
         GeistMono.variable
       )} //Need to play around with this on mobile devices
     >
-      <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
+      <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto
+        bg-gradient-to-br from-stone-500 to-stone-100 bg-fixed h-screen
+        dark:bg-gradient-to-br dark:from-stone-950 dark:to-stone-500"
+      >
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
           <Time />
           <Navbar />
