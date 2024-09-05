@@ -4,14 +4,15 @@ publishedAt: '2023-12-24'
 summary: 'Track your daily nutrition details, calculate your optimal calorie intake, and search for nutrition labels.'
 ---
 
+---
+
 [MyFoodDiary]:https://myfooddiary.com/
 
-## Languages and Tools
+## Languages and Technologies
 
 1. Python
 2. Selenium
 3. Beautiful Soup
-
 
 ## Description
 
@@ -20,7 +21,66 @@ Being a fitness orientated individual that loves to code, what better beginner p
 ## Features
 
 * Label Search—allows the user to find the total calories, fat, protein, and carbohydrates for nearly any food item
-
 * Daily Log—a CSV file that users can track their daily food intake with, split by date
-
 * Calorie Calculator—given a target weight, can help you reach your goal based on the Revised Harris-Benedict Equation
+
+## Code Snippets
+
+Instantiating the Web Driver:
+
+```Python
+def browserStart():
+    print("Macro Tracker V1 Starting...")
+    driver=webdriver.Safari();print('Opening nutrition website...')
+    driver.get('https://www.myfooddiary.com/')
+    return driver
+```
+
+Calculating target macros/calories:
+
+```Python
+sex=input('Are you male or female? (m/f): ')
+    age=int(input('What is your current age?: '))
+    weight=float(input('How much do you currently weigh? (in lbs): '))*0.45359237
+    height=float(input('What is your height in inches?: '))*2.54
+    activity=input('Are you sedentary, lightly, moderately, or very active? (s,l,m,v):  ')
+    goal=input('Are you trying to lose, maintain, or gain weight? (l,m,g): ')
+    nl()
+
+    try:
+        if sex=='m': bmr=10*weight+6.25*height-5*age+5
+        elif sex=='f': bmr=10*weight+625*height-5*age-161
+        else: raise Exception('Ensure that you select a correct sex value.')
+
+        if activity=='s': mult=1.2
+        elif activity=='l': mult=1.375
+        elif activity=='m': mult=1.55
+        elif activity=='v': mult=1.725
+        else: raise Exception('Ensure that you select a correct activity value.')
+
+        if goal=='l': currentGoal=bmr*mult*.8
+        elif goal=='m': currentGoal=bmr*mult+500
+        elif goal=='g': currentGoal=bmr*mult
+        else: raise Exception('Ensure that you select a correct weight goal value.')
+    except Exception as e: print(e)
+
+    print(f'Current goal is: \n{currentGoal} calories \n{currentGoal*.4/4}g of carbohydrates\n{currentGoal*.3/4}g of protein\n {currentGoal*.3/9}g of fat')
+```
+
+Parsing through HTML data:
+
+```Python
+#Lead up to click selected food item for nutrition facts
+item=nutritionElements[itemPick-1]
+idTag= item.get_attribute("id")
+element=driver.find_element(By.ID, idTag)
+driver.execute_script("arguments[0].click();", element)
+time.sleep(1)
+
+#Nutritional information printed and saved to memory
+calories=driver.find_element(By.XPATH, '//*[@id="nf_cal_hldr"]/div').text
+fat=driver.find_element(By.CLASS_NAME, "GramsFat").text
+carbohydrates=driver.find_element(By.CLASS_NAME, "GramsCarbs").text
+protein=driver.find_element(By.CLASS_NAME, "GramsProtein").text
+print(f'NUTRITION FACTS:\n{calories=}\n{fat=}\n{carbohydrates=}\n{protein=}')
+```

@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Page() {
     return(
         <section>
-            <h1 className="mb-8 text-2xl font-semibold tracking-tighter">Welcome to my tutoring page</h1>
+            <h1 className="mb-8 text-2xl font-semibold tracking-tighter">Tutoring Services</h1>
             <p>I tutor middle school and high school students in the following subjects up to the collegiate level:</p>
             <br/>
             <ul className="list-disc pl-5"> {/*The */}

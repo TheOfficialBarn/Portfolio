@@ -1,7 +1,7 @@
 export default function Page() {
     return(
         <section>
-            <h1 className="mb-8 text-2xl font-semibold tracking-tighter">My Resume</h1>
+            <h1 className="mb-8 text-2xl font-semibold tracking-tighter">My Résumé</h1>
             <p className="mb-4">Made with LaTeX</p>
 
             <div className="drop-shadow-2xl">
