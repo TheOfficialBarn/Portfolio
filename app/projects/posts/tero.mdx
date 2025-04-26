@@ -1,0 +1,62 @@
+---
+title: 'Tero: A secure medical check-in platform'
+publishedAt: '2025-04/26'
+summary: 'An Progressive Web App that '
+---
+[Repository]:https://github.com/TheOfficialBarn/tero
+---
+
+[Repository]
+
+## Languages and Technologies
+
+1. Next.js / React
+2. Javascript
+3. Pinata
+4. Firebase
+5. Etherium
+6. Eccrypto
+7. Gemini
+
+## Inspiration
+
+The inspiration for TeroSecureMD came from the need to empower patients with full control over their medical records while addressing the challenges of data security, privacy, and accessibility in the healthcare industry. We wanted to create a platform that leverages blockchain technology to provide a transparent, secure, and patient-centric solution for managing medical data.
+
+## What it Does
+
+TeroSecureMD allows patients to securely store, manage, and share their medical records on the blockchain. It ensures that patients have complete ownership of their data, enabling them to grant or revoke access to healthcare providers as needed. The platform also provides a transparent activity log, ensuring that all interactions with the data are tamper-proof and traceable.
+
+## Code Snippets
+
+Storing Files on Blockchain
+    : Leverages Ethereum to Secure Medical Documents
+```Javascript
+const storeOnBlockchain = async (ipfsHash, metadata) => {
+    if (!window.ethereum) return;
+
+    try {
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const signer = provider.getSigner();
+      const contract = new ethers.Contract(
+        process.env.NEXT_PUBLIC_CONTRACT_ADDRESS,
+        [
+          "function storeFile(string memory ipfsHash, string memory metadata) public",
+        ],
+        signer,
+      );
+      const tx = await contract.storeFile(ipfsHash, JSON.stringify(metadata));
+      await tx.wait();
+    } catch (error) {
+      console.error("Blockchain storage failed:", error);
+      throw error;
+    }
+  };
+```
+
+## Images
+
+![Tero Search Interface](https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/357/562/datas/original.png "Home")
+![Gemini Symptom Checker](https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/357/560/datas/original.png "AI Chatbot")
+![Check-in Portal](https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/357/663/datas/original.png "Check-in portal")
+![Medical Records](https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/357/558/datas/original.png "Records")
+![Upload Records](https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/357/561/datas/original.png "Upload")
